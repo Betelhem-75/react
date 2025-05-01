@@ -4,7 +4,7 @@ import  libraryLogo  from '../assets/Library.svg';
 
 const Nav = () => {
     return (
-     <Nav>
+     
         <div className="nav__container">
             <a href="/">
               <img src={libraryLogo} alt="" className="logo" />
@@ -53,7 +53,7 @@ const Nav = () => {
                 </ul>
             </div>
         </div>
-     </Nav>
+     
     );
 }
 
