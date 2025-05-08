@@ -1,8 +1,19 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import  libraryLogo  from '../assets/Library.svg';
+import { faBagShopping, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons/faTimes";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons/faShoppingCart";
 
 const Nav = () => {
+    function openMenu() {
+        document.body.classList += " menu--open";
+    }
+
+    function closeMenu() {
+        document.body.classList.remove("menu--open");
+    }
+
     return (
      
         <div className="nav__container">
@@ -20,19 +31,19 @@ const Nav = () => {
                         Books
                     </a>
                 </li>
-                <button className="btn__menu">
-                   <FontAwesomeIcon icon="bars" />
+                <button className="btn__menu" onClick={openMenu}>
+                   <FontAwesomeIcon icon={faBars} />
                 </button>
                 <li className="nav__icon">
                   <a href="/cart" className="nav__link">
-                     <FontAwesomeIcon icon="Shopping-cart" />
+                     <FontAwesomeIcon icon={faShoppingCart} />
                   </a>
                   <span className="cart__length">2</span>
                 </li>
             </ul>
             <div className="menu__backdrop">
-                <button className="btn__menu btn__menu--close">
-                   <FontAwesomeIcon icon="times" />
+                <button className="btn__menu btn__menu--close" onClick={closeMenu}>
+                   <FontAwesomeIcon icon={faTimes} />
                 </button>
                 <ul className="menu__links">
                     <li className="menu__list">
