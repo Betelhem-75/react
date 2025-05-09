@@ -49,9 +49,9 @@ function App() {
         <Nav  numberOfItems={numberOfItems()}/>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/books" exact render={() => <Books books={books} />} />
-          <Route path="books/:id" render={() => <BookInfo books={books} addToCart={addToCart} cart={cart}/>} />
-          <Route path="books/cart" render={() => <Cart books={books} cart={cart} changeQuantity={changeQuantity} removeItem={removeItem} />} />
+          <Route path="/books" exact element={books} />
+          <Route path="books/:id" element={() => <BookInfo books={books} addToCart={addToCart} cart={cart}/>} />
+          <Route path="books/cart" element={() => <Cart books={books} cart={cart} changeQuantity={changeQuantity} removeItem={removeItem} />} />
           </Routes>
         <Footer />
       </div>
