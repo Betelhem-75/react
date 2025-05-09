@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import Rating from "./Rating";
@@ -32,7 +32,7 @@ const Book = ({ book  }) => {
                        <figure className="book__img--wrapper">
                            <img 
                              src={book.url} 
-                             alt="" className="book__img" onLoad={imageLoaded}
+                             alt="" className="book__img"
                            />
                       </figure>
                    </Link>

@@ -69,7 +69,7 @@ const BookInfo = ({ books, addToCart, cart }) => {
                      {books
                         .filter((book) => book.rating === 5 && +book.id !== +id)
                         .slice(0, 4)
-                        .map(book => <Book book={book} key={book.id} />)
+                        .map(book => <book book={book} key={book.id} />)
                      }
                     </div>
                 </div>
