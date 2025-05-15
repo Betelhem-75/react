@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Book from "../components/ul/Book";
+import { books as initialBooks } from "../data";
 
-
-const Books = ( { books: initialBooks }) => {
+const Books = () => {
     const [books, setBooks] = useState(initialBooks)
 
     function filterBooks(filter) {
